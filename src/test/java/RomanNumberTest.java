@@ -23,6 +23,11 @@ public class RomanNumberTest {
         assertEquals("IV", toRoman(4));
     }
 
+    @Test
+    void convertNumberFiveToV() {
+        assertEquals("V", toRoman(5));
+    }
+
     private String toRoman(int number) {
         String result = "";
         if (number == 4) {
