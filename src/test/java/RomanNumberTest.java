@@ -39,6 +39,10 @@ public class RomanNumberTest {
     }
     private String toRoman(int number) {
         String result = "";
+        if (number == 9) {
+            result = "IX";
+            number -= 9;
+        }
         if (number >= 5) {
             result = "V";
             number -= 5;
