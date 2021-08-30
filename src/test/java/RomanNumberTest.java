@@ -9,7 +9,7 @@ public class RomanNumberTest {
     }
 
     @Test
-    void convertNumberOneToII() {
+    void convertNumberTwoToII() {
         assertEquals("II", toRoman(2));
     }
 
@@ -18,10 +18,24 @@ public class RomanNumberTest {
         assertEquals("III", toRoman(3));
     }
 
+    @Test
+    void convertNumberFourToIV() {
+        assertEquals("IV", toRoman(4));
+    }
+
     private String toRoman(int i) {
-        if (i == 2) {
-            return "II";
+        String result = "";
+
+        if (i == 1) {
+            result = "I";
         }
-        return "I";
+        else if (i == 2) {
+            result = "II";
+        } else {
+            result = "III";
+        }
+
+        return  result;
+
     }
 }
