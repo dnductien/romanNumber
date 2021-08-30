@@ -23,17 +23,16 @@ public class RomanNumberTest {
         assertEquals("IV", toRoman(4));
     }
 
-    private String toRoman(int i) {
+    private String toRoman(int number) {
         String result = "";
+        if (number == 4) {
+            result = "IV";
+            number -= 4;
+        }
+        for (int i = 0; i < number; i++) {
+            result += "I";
+        }
 
-        if (i == 1) {
-            result = "I";
-        }
-        else if (i == 2) {
-            result = "II";
-        } else {
-            result = "III";
-        }
 
         return  result;
 
